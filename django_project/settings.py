@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config #for .env
+from decouple import config  # for .env
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -33,10 +33,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users.apps.UsersConfig',#added
-    'blog.apps.BlogConfig',#added
-    'crispy_forms',#added
-    'crispy_bootstrap4',#added
+    'users.apps.UsersConfig',  # added
+    'blog.apps.BlogConfig',  # added
+    'crispy_forms',  # added
+    'crispy_bootstrap4',  # added
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,10 +129,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4' #added
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4" #added
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # added
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"  # added
 
-LOGIN_REDIRECT_URL='blog-home'
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'  # default is  accounts/login/,
 # pip install crispy-bootstrap4
 # pip install django-crispy-forms
-# pip install python-decouple    
+# pip install python-decouple
